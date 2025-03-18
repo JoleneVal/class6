@@ -125,13 +125,15 @@ function printStats(arr) {
 	
 }
 
-function b(arr) {
-	let sortingArr = [];
+function sortArrayAscending(arr) {
+	let sortingArr = []; // create a new array to avoid changing the original
 	for(let i = 0; i < arr.length; i++)
-		sortingArr[i] = arr[i];
+		sortingArr[i] = arr[i]; // copy elements from the given array
+    // sorting algorithm
 	for(let i = 0; i < sortingArr.length - 1; i++)
 		for(let j = i + 1; j < sortingArr.length; j++)
 			if(sortingArr[i] > sortingArr[j]) {
+                // swap elements if they are in the wrong order
 				let temp = sortingArr[i];
 				sortingArr[i] = sortingArr[j];
 				sortingArr[j] = temp;
